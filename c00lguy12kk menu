@@ -1,6 +1,7 @@
+-- Lista de URLs para buscar o script
 local scriptUrls = {
-    "https://raw.githubusercontent.com/sirk12kk/C00lguy-menu-v1.2/refs/heads/main/README.md",
-    "https://backup-url.com/script.lua" -- Replace with a real fallback URL
+    "https://raw.githubusercontent.com/sirk12kk/C00lguy-menu-v1.2/main/script.lua", -- Certifique-se de que o caminho esteja correto
+    "https://backup-url.com/script.lua" -- Substitua por um URL de fallback real
 }
 
 local function fetchAndExecuteScript()
@@ -16,7 +17,7 @@ local function fetchAndExecuteScript()
             end)
             if execSuccess then
                 print("Script executed successfully.")
-                return -- Exit after successful execution
+                return -- Sair após execução bem-sucedida
             else
                 warn("Error executing script from: " .. url .. " - Error: " .. execErr)
             end
